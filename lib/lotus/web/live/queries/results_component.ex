@@ -52,7 +52,7 @@ defmodule Lotus.Web.Queries.ResultsComponent do
           <.sort_chips :if={@sorts != []} sorts={@sorts} target={@target} />
 
           <%!-- Content area: Table or Chart --%>
-          <div class="flex-1 min-h-0 overflow-hidden">
+          <div class="flex-1 overflow-hidden">
             <%= if @visualization_view_mode == :chart && has_valid_config?(@visualization_config) do %>
               <.render_chart result={@result} config={@visualization_config} />
             <% else %>
